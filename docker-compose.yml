@@ -1,0 +1,39 @@
+version: '3.7'
+
+networks:
+  backend:
+
+services:
+  frontend:
+    container_name: front-end
+    build:
+      context: ./front-end
+    ports:
+      - 8080:8080
+
+  balaner:
+    container_name: balancer
+    build:
+      context: ./balancer
+    ports:
+      - 9090:9090
+    networks:
+      - backend
+
+  backend1:
+    container_name: backend1
+    build:
+      context: ./backend
+    ports:
+      - 9091:9091
+    networks:
+      - backend
+
+  backend2:
+    container_name: backend2
+    build:
+      context: ./backend
+    ports:
+      - 9092:9092
+    networks:
+      - backend
