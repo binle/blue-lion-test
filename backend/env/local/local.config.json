@@ -1,0 +1,22 @@
+{
+  "allowed_origin_urls": ["http://localhost:8080", "http://localhost:9090", "http://localhost:3000"],
+  "log_config": {
+    "folderPath": "./env/local/store/logs",
+    "filename": "server",
+    "level": "debug",
+    "maxNumberFile": 10,
+    "maxFileSize": 1048576
+  },
+  "jwt_secret": "jwt_secret",
+  "database_config": {
+    "username": "postgres",
+    "password": "mysecretpassword",
+    "database": "db_blue_lion",
+    "synchronize": false,
+    "host": "postgres",
+    "port": 5432
+  },
+  "redis_config": "redis://redis:6379",
+  "host": "0.0.0.0",
+  "port": 9090
+}

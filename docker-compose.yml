@@ -1,39 +1,54 @@
 version: '3.7'
 
 networks:
-  backend:
+  blue_lion:
 
 services:
+  postgres:
+    container_name: blue-lion-postgres
+    hostname: postgres
+    image: postgres
+    networks:
+      - blue_lion
+    environment:
+      POSTGRES_PASSWORD: mysecretpassword
+    restart: unless-stopped
+
+  redis:
+    container_name: blue-lion-redis
+    hostname: redis
+    image: 'redis:alpine'
+    networks:
+      - blue_lion
+
   frontend:
-    container_name: front-end
+    container_name: blue-lion-front-end
     build:
       context: ./front-end
-    ports:
-      - 8080:8080
+    networks:
+      - blue_lion
 
   balaner:
-    container_name: balancer
+    container_name: blue-lion-balancer
     build:
       context: ./balancer
     ports:
       - 9090:9090
     networks:
-      - backend
+      - blue_lion
 
   backend1:
-    container_name: backend1
+    container_name: blue-lion-backend1
+    hostname: backend1
     build:
       context: ./backend
-    ports:
-      - 9091:9091
     networks:
-      - backend
+      - blue_lion
 
   backend2:
-    container_name: backend2
+    container_name: blue-lion-backend2
+    hostname: backend2
     build:
       context: ./backend
-    ports:
-      - 9092:9092
     networks:
-      - backend
+      - blue_lion

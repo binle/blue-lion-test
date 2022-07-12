@@ -1,0 +1,354 @@
+.btn {
+  color: #fff;
+  background-color: #409eff;
+  border-color: #409eff;
+  height: 30px;
+  border-radius: 5px;
+  min-width: 60px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+
+  .form-input-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
+
+    .input-label {
+      font-weight: 600;
+      width: 100px;
+    }
+    .input-value {
+      flex: 1;
+    }
+  }
+
+  .form-submit {
+    margin-top: 10px;
+    color: #fff;
+    background-color: #409eff;
+    border-color: #409eff;
+    height: 30px;
+    border-radius: 5px;
+    min-width: 60px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .form-button {
+    margin-top: 10px;
+    color: #fff;
+    background-color: gray;
+    border-color: gray;
+    height: 30px;
+    border-radius: 5px;
+    min-width: 60px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 5px;
+  }
+}
+
+.change-password {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  .change-password-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+  }
+}
+
+.application {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .header {
+    height: 50px;
+    background: #78b43d;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .header-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: end;
+      max-width: 1000px;
+      width: 100%;
+
+      .header-content-user {
+        margin-right: 10px;
+        color: white;
+      }
+    }
+    .header-navigation {
+      margin-left: 5px;
+      display: none;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    .left-nav {
+      display: flex;
+      flex-direction: column;
+      width: 100px;
+      padding: 0 10px;
+      border-right: 1px solid rgb(35, 38, 41);
+      background-color: #fff;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+      }
+
+      a {
+        margin: 5px;
+      }
+    }
+    .main-content {
+      flex: 1;
+      padding: 20px;
+
+      .login-page {
+        padding: 50px;
+      }
+
+      .list-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .list-area {
+        display: flex;
+        flex-direction: column;
+
+        .list-row {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          min-height: 28px;
+
+          border: 1px solid;
+          border-top: none;
+
+          &.row-header {
+            font-weight: 800;
+          }
+
+          .list-column {
+            word-wrap: break-word;
+            text-overflow: ellipsis;
+            width: 50%;
+          }
+          .list-column:first-child {
+            width: 30%;
+          }
+          .list-column:last-child {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20%;
+          }
+        }
+        .list-row:first-child {
+          border-top: 1px solid;
+        }
+      }
+      .list-footer {
+        display: flex;
+        flex-direction: row;
+        padding: 5px 0;
+      }
+    }
+  }
+}
+
+.detail-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  .modal-content {
+    width: 800px;
+    max-width: 95%;
+    min-height: 800px;
+    max-height: 80%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+
+    .modal-header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .modal-form {
+      margin-top: 20px;
+
+      form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+
+        .extra-information {
+          display: flex;
+          flex-direction: column;
+
+          span {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            .extra-information-add-button {
+              width: 80px;
+            }
+          }
+
+          .form-input-row {
+            min-width: 320px;
+            width: auto;
+            margin: 0 0;
+
+            .extra-header-label {
+              border: 1px solid;
+              flex: 1;
+            }
+            .extra-header-value {
+              border: 1px solid;
+              border-left: none;
+              flex: 1;
+            }
+
+            .extra-label {
+              flex: 1;
+            }
+            .extra-value {
+              flex: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 400px) {
+  .application {
+    .header {
+      .header-navigation {
+        display: block;
+      }
+    }
+    .content {
+      .left-nav {
+        display: none;
+        border: none;
+        position: absolute;
+        top: 0;
+        padding-top: 50px;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+
+  .detail-modal {
+    .modal-content {
+      width: 90%;
+      .modal-form {
+        margin-top: 20px;
+
+        form {
+          .extra-information {
+            .form-input-row {
+              .extra-label {
+                width: 20px;
+                flex: 1;
+              }
+              .extra-value {
+                flex: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .application {
+    .header {
+      .header-navigation {
+        display: block;
+      }
+    }
+    .content {
+      .left-nav {
+        display: none;
+        border: none;
+        position: absolute;
+        top: 0;
+        padding-top: 50px;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+
+  .detail-modal {
+    .modal-content {
+      width: 95%;
+    }
+  }
+}
